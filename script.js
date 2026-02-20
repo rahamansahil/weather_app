@@ -407,7 +407,7 @@ class WeatherApp {
         errorMessage.textContent = message;
         errorContainer.classList.remove('hidden');
         
-        // Auto-hide after 5 seconds
+        // Auto-hide the after 5 seconds
         setTimeout(() => {
             this.hideError();
         }, 5000);
