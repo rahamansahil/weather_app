@@ -329,7 +329,7 @@ class WeatherApp {
         // Remove all dynamic background classes
         body.classList.remove('rainy-bg', 'snowy-bg', 'sunny-bg', 'cloudy-bg');
         
-        // Add appropriate background based on condition
+        // Adding appropriate background based on condition
         if (condition === 'Rain' || condition === 'Drizzle' || condition === 'Thunderstorm') {
             body.classList.add('rainy-bg');
         } else if (condition === 'Snow') {
@@ -360,7 +360,7 @@ class WeatherApp {
         if (!this.recentCities.includes(city)) {
             this.recentCities.unshift(city);
             
-            // Keep only last 5 cities
+            // It Keeps only last 5 cities
             if (this.recentCities.length > 5) {
                 this.recentCities.pop();
             }
