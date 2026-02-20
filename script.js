@@ -246,7 +246,7 @@ class WeatherApp {
             : `${visibilityMiles} miles`;
         document.getElementById('visibility').textContent = visibility;
         
-        // Check for extreme temperature
+        // Checking  for extreme temperature
         this.checkExtremeTemperature(data.main.temp);
     }
 
