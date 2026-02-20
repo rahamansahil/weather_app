@@ -426,7 +426,7 @@ class WeatherApp {
     }
 }
 
-// Initialize the app
+// Initializing the app
 document.addEventListener('DOMContentLoaded', () => {
     new WeatherApp();
 });
