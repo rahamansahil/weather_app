@@ -14,10 +14,10 @@ class WeatherApp {
         // Loading recent cities from localStorage
         this.loadRecentCities();
         
-        // Initialize event listeners
+
         this.setupEventListeners();
         
-        // Check if there's a last searched city
+        // Checking if there is a last searched city
         const lastCity = localStorage.getItem('lastCity');
         if (lastCity) {
             this.getWeatherData(lastCity);
@@ -152,7 +152,7 @@ class WeatherApp {
         try {
             this.showLoading();
             
-            // Fetch current weather by coordinates
+            
             const currentWeatherResponse = await fetch(
                 `${this.BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${this.API_KEY}&units=metric`
             );
@@ -173,10 +173,10 @@ class WeatherApp {
             this.updateForecast(forecastData);
             this.updateBackground(currentWeather.weather[0].main);
             
-            // Add to recent cities
+            
             this.addRecentCity(currentWeather.name);
             
-            // Save last city
+           
             localStorage.setItem('lastCity', currentWeather.name);
             
             // Show weather sections
@@ -211,7 +211,7 @@ class WeatherApp {
         // Update location
         document.getElementById('locationName').textContent = `${data.name}, ${data.sys.country}`;
         
-        // Update temperature based on current unit
+       
         this.updateTemperatureDisplay();
         
         // Update weather condition and icon
